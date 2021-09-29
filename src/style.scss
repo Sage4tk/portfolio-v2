@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+//colors
+$main: #262626;
+$yellow: #FFEA00;
+
+// font
+$kashua: 'Kaushan Script', cursive;
+$fredoka: 'Fredoka One', cursive;
+$rubik: 'Rubik', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $rubik;
+    color: #fff;
+}
+
+body {
+    background-color: $main;
+    overflow-x: hidden;
+}
+
+//landing page
+.landing {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 4rem 0 0 0;
+}
+
+.landing-header {
+    padding: 0 4rem;
+    margin-bottom: 4rem;
+}
+
+.landing-header h1 {
+    font-family: $kashua;
+    color: $yellow;
+    font-size: 4.5rem
+}
+
+.landing-header h2 {
+    font-family: $fredoka;
+    color: rgba(255, 255, 255, 0.26);
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.landing-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+}
+
+.landing-nav a {
+    align-self: flex-start;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: $fredoka;
+    position: relative;
+    transition: 1s;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 0%;
+        width: 2px;
+        background: $yellow;
+        border-radius: 4rem;
+        left: 0;
+        transition: 0.5s;
+        bottom: 50%;
+    }
+    &:hover::before {
+        height: 100%;
+        bottom: 0;
+    }
+    &:hover:hover {
+        padding: 0 0 0 1rem;
+    }
+}
+
+.landing-nav > a:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.landing-contact {
+    display: flex;
+    flex-direction: row;
+    padding: 0 4rem;
+    position: absolute;
+    bottom: 100px;
+}
+
+.landing-contact > *:first-child{
+    margin-right: 300px;
+}
+
+.landing-contact div > *:first-child{
+    font-size: 0.8rem;
+    color: $yellow;
+}
+
+.landing-contact div > p:nth-of-type(2) {
+    font-size: 1rem;
+}
+
+.landing-contact div p > span {
+    color: rgba(255, 255, 255, 0.26);
+}
+
+hr {
+    border: none;
+    border-top: dashed 1px rgba(255, 255, 255, 0.274);
+    width: 96%;
+    position: absolute;
+    right: 2%;
+    top: 0;
+}
+
+.landing-footer {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2%;
+}
+
+.landing-img {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+    z-index: -1;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.226);
+    border-radius: 100%;
+}
+
+.landing-img img {
+    width: 400px;
+    height: auto;
+    border-radius: 100%;
+    transition: 1s;
+}
+
+//about page
+.about {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about h1 {
+    font-family: $kashua;
+    color: rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.25rem;
+    font-size: 8.75rem;
+    position: absolute;
+    width: 800px;
+    text-align: center;
+    left: 50%;
+    margin-left: -400px;
+    top: 2%;
+}
+
+.about p:first-of-type {
+    font-size: 1.6rem;
+}
+
+.about p span {
+    font-weight: bold;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    padding: 0 4rem;
+    justify-content: space-between;
+}
+
+.about-info > div {
+    width: 200px;
+}
+
+.about-info div > p:first-child {
+    color: yellow;
+    font-size: 0.8rem;
+}
+
+.about-info div > p:last-child {
+    font-size: 1rem;
+}
+
+//project page
+.project-open {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-open h1 {
+    color: $yellow;
+    font-family: $kashua;
+    font-size: 6rem;
+    z-index: 1;
+    animation: swerveRight 1s forwards 1s;
+}
+
+.project-left {
+    position: absolute;
+    background: $main;
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    border-right: dashed 1px #fff;
+    animation: swerveLeft 1s forwards 1s;
+}
+
+.project-right {
+    position: absolute;
+    background: $main;
+    width: 50vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    border-left: dashed 1px #fff;
+    animation: swerveRight 0.5s forwards 1s;
+}
+
+//404 page
+.notfound {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notfound div h1 {
+    color: $yellow;
+    margin-bottom: 1rem;
+}
+
+.notfound div p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+//footer
+.footer {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.right-nav {
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    &:hover > img {
+        animation: moveRight 0.5s infinite;
+    }
+    img {
+        margin-left: 1rem;
+    }
+}
+
+.left-nav {
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    &:hover > img {
+        animation: moveLeft 0.5s infinite;
+    }
+    img {
+        margin-right: 1rem;
+        transform: scaleX(-1);
+    }
+}
+
+//animations
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0) scaleX(-1);
+    }
+    50% {   
+        transform: translateX(0.2rem) scaleX(-1);
+    }
+    100% {
+        transform: translateX(0) scaleX(-1);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-0.2rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes swerveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes swerveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
