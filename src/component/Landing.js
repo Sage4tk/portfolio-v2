@@ -31,11 +31,11 @@ export default function Landing() {
                 </div>
             </div>
             <div className="landing-img">
-                <img src={me}></img>
+                <img src={me} alt="Timothy Timbol"></img>
             </div>
             <div className="landing-footer">
                 <hr />
-                <NavLink to="/about" className="right-nav">About Me<img src={arrow}></img></NavLink>
+                <NavLink to="/about" className="right-nav">About Me<img src={arrow} alt="right arrow"></img></NavLink>
             </div>
         </div>
     )

@@ -246,6 +246,31 @@ hr {
     animation: swerveRight 0.5s forwards 1s;
 }
 
+.project-grid {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-content: space-between;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project-card {
+    background: black;
+    height: 200px;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 400px;
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
 //404 page
 .notfound {
     width: 100vw;
