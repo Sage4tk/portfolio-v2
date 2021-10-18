@@ -8,12 +8,14 @@ export default function ProjectCard({ data }) {
     }
 
     return (
-        <Link to={`/id/${data._id}`}>
             <div className="project-container">
-                <div className="project-card" style={style}>
-                    {data.title}
-                </div>
+                <Link to={`/id/${data._id}`}>
+                    <div className="project-card" style={style}>
+                        <div className="project-card_overlay">
+                            <p>{data.title}</p>
+                        </div>
+                    </div>
+                </Link>
             </div>
-        </Link>
     )
 }

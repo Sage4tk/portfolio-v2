@@ -16,7 +16,7 @@ export default function Footer({ left, right, bottomed }) {
         <div className={bottomed ? "footer bottom" : "footer"}>
                 <hr />
                 <NavLink to={linkConverter(left)} className="left-nav"><img src={arrow} alt="left-arrow"></img>{left}</NavLink>
-                <NavLink to={linkConverter(right)} className="right-nav">{right}<img src={arrow} alt="right-arrow"></img></NavLink>
+                {bottomed ? null: <NavLink to={linkConverter(right)} className="right-nav">{right}<img src={arrow} alt="right-arrow"></img></NavLink>}
         </div>
     )
 }

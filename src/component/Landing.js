@@ -12,7 +12,7 @@ export default function Landing() {
                 <title>Portfolio | Timothy Timbol</title>
             </Helmet>
             <div className="landing-header">
-                <h1>Zack<br/>Timbol</h1>
+                <h1>Timothy<br/>Timbol</h1>
                 <h2>FRONT-END DEVELOPER</h2>
             </div>
             <div className="landing-nav">
@@ -28,6 +28,10 @@ export default function Landing() {
                 <div>
                     <p>PHONE</p>
                     <p><span>(+971)</span> 50 595 7395</p>
+                </div>
+                <div>
+                    <p>GitHub</p>
+                    <a href="https://github.com/Sage4tk">https://github.com/Sage4tk</a>
                 </div>
             </div>
             <div className="landing-img">

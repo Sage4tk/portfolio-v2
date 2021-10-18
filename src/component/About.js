@@ -10,7 +10,7 @@ export default function About() {
                 <title>About Me | Timothy Timbol</title>
             </Helmet>
             <h1>about me</h1>
-            <p>I'm a <span>junior front-end developer</span> from Manila, Philippines.<br/>I aim to provide meticulous solutions to your enterprise's needs.</p>
+            <p>I'm a <span>junior front-end developer</span> from Manila, Philippines.<br/>I aim to provide meticulous solutions for your enterprise's needs.</p>
             <div className="about-info">
                 <div>
                     <p>Front End Languages:</p>

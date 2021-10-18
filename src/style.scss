@@ -90,13 +90,11 @@ body {
 .landing-contact {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0 4rem;
     position: absolute;
+    width: 100%;
     bottom: 100px;
-}
-
-.landing-contact > *:first-child{
-    margin-right: 300px;
 }
 
 .landing-contact div > *:first-child{
@@ -216,6 +214,14 @@ hr {
     justify-content: center;
 }
 
+.project h1 {
+    color: rgba(255, 255, 255, 0.26);
+    font-family: $kashua;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
 .project-open h1 {
     color: $yellow;
     font-family: $kashua;
@@ -257,18 +263,105 @@ hr {
 .project-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    a {
+        text-decoration: none;
+    }
 }
 
 .project-card {
     background: black;
     height: 200px;
     border-radius: 1rem;
-    padding: 1rem;
     width: 400px;
     transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
         transform: scale(1.2);
     }
+}
+
+.project-card:hover > .project-card_overlay {
+    transform: translateX(100%);
+}
+
+.project-card_overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card_overlay p {
+    font-family: $rubik;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+//specific project
+.project-target h1 {
+    font-family: $kashua;
+    color: rgba(255, 255, 255, 0.26);
+    font-size: 4rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.project-target_info {
+    padding: 1rem 7rem;
+    display: flex;
+}
+
+.project-target_info img {
+    height: 320px;
+    width: auto;
+    margin-right: 4rem;
+    transition: 1s;
+    &:hover {
+        transform: scale(1.1) rotate(1deg)
+    }
+}
+
+.project-target_desc {
+    width: 500px;
+    font-size: 1rem;
+}
+
+.project-target_desc > p:first-of-type{
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+}
+
+.project-target_control > p:first-child {
+    color: yellow;
+    font-size: 0.8rem;
+}
+
+.project-target_desc > .project-target_control:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+//contact page
+.contact-page h1 {
+    font-family: $kashua;
+    color: rgba(255, 255, 255, 0.26);
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.contact-page p {
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 //404 page
@@ -287,6 +380,29 @@ hr {
 
 .notfound div p {
     text-align: center;
+    font-size: 1.2rem;
+}
+
+.project-404 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-404 div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-404 div h1 {
+    color: $yellow;
+    font-size: 3rem;
+}
+
+.project-404 div a {
     font-size: 1.2rem;
 }
 

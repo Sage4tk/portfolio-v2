@@ -11,6 +11,7 @@ import About from './component/About';
 import NotFound from './component/NotFound';
 import Project from './component/Project';
 import TargetProject from './component/TargetProject';
+import Contact from './component/Contact';
 
 function App() {
   //fecth data
@@ -38,6 +39,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/projects" component={() => (<Project toggleOpen={toggleOpen} setToggleOpen={setToggleOpen} />)} />
         <Route path="/id/:params" component={TargetProject} />
+        <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
     </Router>
