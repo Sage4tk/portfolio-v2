@@ -18,7 +18,7 @@ export default function Landing() {
             <div className="landing-nav">
                 <NavLink to="/about">ABOUT ME</NavLink>
                 <NavLink to="/projects">PROJECTS</NavLink>
-                <NavLink to="/contacts">CONTACT</NavLink>
+                <NavLink to="/contact">CONTACT</NavLink>
             </div>
             <div className="landing-contact">
                 <div>

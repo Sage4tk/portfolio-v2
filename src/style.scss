@@ -359,9 +359,62 @@ hr {
     margin-bottom: 4rem;
 }
 
-.contact-page p {
+.contact-page_desc {
     font-size: 1.4rem;
     text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+button {
+    color: #262626;
+}
+
+textarea {
+    color: #000;
+}
+
+input {
+    color: #000;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.26);
+    color: white;
+    border: none;
+    align-self: center;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    &:hover {
+        background: $yellow;
+        color: $main;
+    }
+}
+
+.error-border {
+    animation: error 0.25s infinite;
+}
+
+.sent-box {
+    margin: 4rem 0 0; 
+    p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
 //404 page
@@ -486,5 +539,14 @@ hr {
     }
     to {
         transform: translateX(100vw);
+    }
+}
+
+@keyframes error {
+    from {
+        box-shadow: none;
+    }
+    to {
+        box-shadow: 0 0 3px 1px red;
     }
 }
