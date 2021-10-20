@@ -21,7 +21,15 @@ $rubik: 'Rubik', sans-serif;
 
 body {
     background-color: $main;
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+html {
+    position: relative;
+    overflow: hidden;
 }
 
 //landing page
@@ -312,7 +320,18 @@ hr {
     color: rgba(255, 255, 255, 0.26);
     font-size: 4rem;
     text-align: center;
-    margin: 3rem 0;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 5%;
+}
+
+.project-target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 
 .project-target_info {
@@ -350,6 +369,10 @@ hr {
 }
 
 //contact page
+.contact-page {
+    height: 94vh;
+}
+
 .contact-page h1 {
     font-family: $kashua;
     color: rgba(255, 255, 255, 0.26);
@@ -384,11 +407,21 @@ button {
 }
 
 textarea {
-    color: #000;
+    color: #fff;
+    background: #2e2e2e;
+    border: none;
+    border-bottom: 1px solid $yellow;
+    padding: 0.25rem;
+    border-radius: 0.1rem;
 }
 
 input {
-    color: #000;
+    color: #fff;
+    background: #2e2e2e;
+    border: none;
+    border-bottom: 1px solid $yellow;
+    padding: 0.25rem;
+    border-radius: 0.1rem;
 }
 
 button {
@@ -403,6 +436,10 @@ button {
         background: $yellow;
         color: $main;
     }
+}
+
+label {
+    margin-bottom: 0.4rem;
 }
 
 .error-border {
@@ -548,5 +585,89 @@ button {
     }
     to {
         box-shadow: 0 0 3px 1px red;
+    }
+}
+
+@media only screen and (max-width:1366px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+//mobile query
+@media only screen and (max-width:768px) {
+    //landing
+    .landing-img {
+        display: none;
+    }
+
+    .landing-contact {
+        flex-direction: column;
+    }
+
+    .landing-contact > *:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    //about page
+    .about h1 {
+        font-size: 5rem;
+        top: 14%
+    }
+
+    .about p:first-of-type {
+        font-size: 1.2rem;
+        width: 80vw;
+    }
+
+    .about-info {
+        flex-direction: column;
+    }
+
+    .about-info > *:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+    
+    //project
+    .project-grid {
+        padding: 4rem 2rem;
+        grid-template-columns: 1fr;
+        height: 70vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .project-card {
+        width: 300px;
+    }
+
+    .project {
+        height: 95.7vh;
+    }
+
+    //contact mobile
+    .contact-page {
+        height: 91.3vh;
+    }
+    
+    .contact-page h1 {
+        font-size: 3rem;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    .hide-M {
+        display: none;
+    }
+
+    //footer 
+    .footer {
+        padding: 0 1rem;
+    }
+
+    .landing-footer {
+        padding: 0 1rem;
     }
 }

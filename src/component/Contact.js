@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com"
+import { Helmet } from "react-helmet";
 
 //impport component
 import Footer from './Footer';
@@ -64,10 +65,13 @@ export default function Contact() {
 
     return (
         <div className="contact-page">
+            <Helmet>
+                <title>Contacts | Timothy Timbol</title>
+            </Helmet>
             <h1>CONTACTS</h1>
             <p className="contact-page_desc">If you are interested on hiring me, you can reach me through the means below.</p>
             {Form(sent)}
-            <div className="landing-contact">
+            <div className="landing-contact hide-M">
                 <div>
                     <p>E-MAIL</p>
                     <p>ttimbol08<span>@gmail.com</span></p>

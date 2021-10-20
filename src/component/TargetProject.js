@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 //context
 import { useProject } from "../context/projectContext";
@@ -27,11 +28,10 @@ export default function TargetProject() {
                 return find._id === params;
             });
 
-            console.log(find)
             setCheck(find);
         }
 
-    }, [project])
+    }, [project, params])
 
     //render if nothing is found
     const nullCheck = (props) => {
@@ -49,14 +49,17 @@ export default function TargetProject() {
         
         return (
             <div className="project-target">
+                <Helmet>
+                    <title>{props[0].title} | Timothy Timbol</title>
+                </Helmet>
                 <h1>{props[0].title}</h1>
                 <div className="project-target_info">
-                    <img src={props[0].imgUrl}></img>
+                    <img src={props[0].imgUrl} alt={props[0].title}></img>
                     <div className="project-target_desc">
                         <p>{props[0].websiteDescription}</p>
                         <div className="project-target_control">
                             <p>Site URL:</p>
-                            <a href={props[0].websiteLink}>{props[0].websiteLink}</a>
+                            <a href={props[0].websiteLink} target="_blank" rel="noreferrer">{props[0].websiteLink}</a>
                         </div>
                         <div className="project-target_control">
                             <p>Stacks:</p>
